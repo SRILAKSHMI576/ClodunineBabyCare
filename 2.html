@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #ffe8d1;
+      }
+      .main {
+        max-width: 100%;
+        padding: 5px;
+      }
+
+      .container {
+        position: relative;
+        max-width: 350px;
+        background: #fff;
+        border-radius: 2px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        height: 200px;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+          0 10px 10px rgba(0, 0, 0, 0.22);
+      }
+
+      .container img {
+        vertical-align: middle;
+        height: 200px;
+      }
+
+      .container img:hover {
+        cursor: pointer;
+      }
+
+      .container .content {
+        position: absolute;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7); /* Black background with 0.5 opacity */
+        color: white;
+        width: 100%;
+        height: 100px;
+      }
+
+      .container .content:hover {
+        background: rgba(0, 0, 0, 0.8);
+        height: 200px;
+      }
+      .container .content:focus {
+        background: rgba(0, 0, 0, 0.8);
+        height: 200px;
+      }
+
+      .text-1 {
+        font-size: 14px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: normal;
+        margin-left: 10px;
+        font-weight: bold;
+      }
+
+      .text-2 {
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: normal;
+        margin-left: 10px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <a
+        id="baby-care-1"
+        href="https://book.cloudninecare.com/online-events/clkn/https/book.cloudninecare.com/baby-care-1/"
+      >
+        <div class="container">
+          <img
+            src="http://d9hhrg4mnvzow.cloudfront.net/book.cloudninecare.com/online-events/c45f1f8f-shutterstock-303060878_0hs0bv0hs08y00001g01o.jpg"
+            alt="Notebook"
+            style="width: 100%;"
+          />
+          <div class="content">
+            <p class="text-1"><strong>9th May, 3:00 PM - 4:00 PM</strong></p>
+
+            <p class="text-2">
+              <strong> Preparing For Arrival - Baby Care 1</strong>
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <a
+        id="breathing-techniques"
+        href="https://book.cloudninecare.com/online-events/clkn/https/book.cloudninecare.com/breathing-techniques/"
+      >
+        <div class="container">
+          <img
+            src="http://d9hhrg4mnvzow.cloudfront.net/book.cloudninecare.com/online-events/0c13c666-shutterstock-190732799_0qo0hr0qo0df00002301o.jpg"
+            alt="Notebook"
+            style="width: 100%;"
+          />
+          <div class="content">
+            <p class="text-1">13th May, 5:00 PM - 6:00 PM</p>
+            <p class="text-2">
+              Preparing For Arrival - Breathing <br />
+              Techniques
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <a
+        id="starting-solids"
+        href="https://book.cloudninecare.com/online-events/clkn/https/book.cloudninecare.com/starting-solids/"
+      >
+        <div class="container">
+          <img
+            src="http://d9hhrg4mnvzow.cloudfront.net/book.cloudninecare.com/online-events/9e652f7e-shutterstock-190732799-modified_0qo0hs0qo0df00002601o.jpg"
+            alt="Notebook"
+            style="width: 100%;"
+          />
+          <div class="content">
+            <p class="text-1">16th May, 12:00 PM - 1:00 PM</p>
+            <p class="text-2">
+              Preparing For Arrival - Starting <br />
+              Solids
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <a
+        id="pregtalks"
+        href="https://book.cloudninecare.com/online-events/clkn/https/book.cloudninecare.com/pregtalks/"
+      >
+        <div class="container">
+          <img
+            src="http://d9hhrg4mnvzow.cloudfront.net/book.cloudninecare.com/online-events/ffb8ffa4-shutterstock-516712363_0qo0hs0qo0df00002601o.jpg"
+            alt="Notebook"
+            style="width: 100%;"
+          />
+          <div class="content">
+            <p class="text-1">16th May, 3:00 PM - 4:00 PM</p>
+            <p class="text-2">
+              Preparing For Arrival - PregTalks
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </body>
+
+  <script type="text/javascript">
+    function addUTMParams() {
+      var loc = window.location.toString();
+      var params = loc.split("?")[1];
+      var anchorIds = [
+        "baby-care-1",
+        "breathing-techniques",
+        "starting-solids",
+        "pregtalks",
+      ];
+      for (let index = 0; index <= anchorIds.length - 1; index++) {
+        var anchor = document.getElementById(anchorIds[index]);
+        anchor.href = anchor.href + "?" + params;
+        console.log("anchor", anchor.href);
+      }
+    }
+    addUTMParams();
+  </script>
+</html>
